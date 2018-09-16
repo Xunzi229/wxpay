@@ -1,0 +1,2 @@
+class Wxpay < ApplicationRecord
+end
