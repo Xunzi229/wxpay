@@ -16,11 +16,11 @@ Things you may want to cover:
   ```yml
     wxpay:
       accounts:
-        - appid: 'xxxxxxxxxxxx'
-          mch_id: "xxxxxxxxx"
-          key: 'xxxxx'
-          notify_url: "xxxx"
-          package: "xxx"
+        - appid: xxxxxx
+          mch_id: xxxxxx
+          key: xxxxxx
+          notify_url: xxxxx
+          package: Sign=WXPay
   ```
 
   2. 创建支付订单
@@ -108,7 +108,7 @@ Things you may want to cover:
     4. 回调
     > 1. 首先微信的回调都是xml，如果是 用grape的话 需要指定 content_type ,format
     > 最重要的是指定 status 为 200 ，默认post是201  ，导致 微信那边一直不通，就会一直 给我们回调
-    
+
 * Database creation
 
 * Database initialization
