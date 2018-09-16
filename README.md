@@ -11,6 +11,8 @@ Things you may want to cover:
 * System dependencies
 
 * Configuration
+
+  > 其中有以下的支付方式
   ```ruby
     # 扫码支付参数
     def wxpay_code_params(**params)
