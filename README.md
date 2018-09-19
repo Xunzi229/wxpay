@@ -32,6 +32,7 @@ Things you may want to cover:
         no:               params[:no],
         body:             params[:body],
         kind:             "code",
+        appid:            params[:appid],
         total_fee:        params[:total_fee],
         out_trade_no:     params[:transaction_no],
         spbill_create_ip: params[:remote_ip]
@@ -44,6 +45,7 @@ Things you may want to cover:
         no:               params[:no],
         body:             params[:body],
         kind:             'h5',
+        appid:            params[:appid],
         total_fee:        params[:total_fee],
         out_trade_no:     params[:transaction_no],
         spbill_create_ip: params['remote_ip'],
@@ -65,7 +67,8 @@ Things you may want to cover:
         out_trade_no:      params[:transaction_no],
         total_fee:         params[:total_fee],
         spbill_create_ip:  params[:remote_ip],
-        kind:             'app'
+        kind:             'app',
+        appid:            params[:appid],
       }
     end
 
@@ -89,7 +92,7 @@ Things you may want to cover:
 
   ```
     3. 退款
-    ```ruby 
+    ```ruby
 
       def wechat_pay_refund(params = {})
         wxpay = Wxpay.find_by(out_transaction_no: "xxxx")
