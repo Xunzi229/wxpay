@@ -124,7 +124,7 @@ Things you may want to cover:
 
     4. 回调
     > 1. 首先微信的回调都是xml，如果是 用grape的话 需要指定 content_type ,format
-    > 最重要的是指定 status 为 200 ，默认post是201  ，导致 微信那边一直不通，就会一直 给我们回调
+    > 最重要的是指定 status 为 200 ，默认post是201  ，导致 微信回调返回失败
 
 * Database creation
 
