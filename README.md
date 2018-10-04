@@ -26,7 +26,7 @@ Things you may want to cover:
   2. 创建支付订单
   > 其中有以下的支付方式
   ```ruby
-    # 扫码支付参数
+    # 扫码 支付参数
     def wxpay_code_params(**params)
       {
         no:               params[:no],
@@ -72,7 +72,7 @@ Things you may want to cover:
       }
     end
 
-    # 小程序支付需要的参数
+    # 小程序 支付参数
     #
     def wxpay_small_params(**params)
       {
@@ -84,6 +84,20 @@ Things you may want to cover:
         appid:            params[:appid],
         openid:           params[:openid],
         kind:             'applets',
+      }
+    end
+
+    ## 公众号 支付参数
+    def wxpay_pub_params(**params)
+      {
+        no:               params[:no],
+        body:             params[:body],
+        spbill_create_ip: params[:remote_ip],
+        out_trade_no:     params[:transaction_no],
+        total_fee:        params[:total_fee],
+        appid:            params[:appid],
+        openid:           params[:openid],
+        kind:             'pub'
       }
     end
 
